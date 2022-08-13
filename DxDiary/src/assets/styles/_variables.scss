@@ -1,0 +1,29 @@
+$bold: 700;
+$normal: 400;
+
+$font-stack-sans: 'bilo', sans-serif;
+$font-serif: 'warnock-pro', serif;
+$font-ui: 'Segoe UI', sans-serif;
+$bold-weight: 500;
+$light-weight: 200;
+$normal-weight: 400;
+$basefont-size: 16px;
+
+$family-sans-serif: $font-stack-sans;
+$family-primary: $font-stack-sans;
+$family-secondary: $font-ui;
+
+/** Bulma Variables **/
+$navbar-box-shadow-color: #999;
+$navbar-box-shadow-size: 0px 5px 0px 0px;
+
+$gap: 20px;
+$section-padding: 20px;
+
+// break points
+$tablet: 620px;
+$desktop: 940px;
+$widescreen: 1260px;
+$fullhd: 1680px;
+$box-radius: 20px;
+$card-radius: 20px;

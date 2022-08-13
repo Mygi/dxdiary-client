@@ -1,0 +1,51 @@
+$text-black: #18272B;
+
+
+$black: $text-black;
+$black-bis: hsl(0, 0%, 7%);
+$black-ter: $text-black;
+$grey-darker: #18272B;
+$grey-dark: #4D4D4D;
+$grey: #CCCCCC;
+$grey-light: #F0E8E6;
+$grey-lighter: #F2F2F2;
+$grey-lightest: #F0F0F0;
+$white-ter: #fff;
+$white-bis: hsl(0, 0%, 98%);
+$white: #F8F9F2;
+$orange: #C59388;
+$yellow: #E4DDCF;
+$green: #749787;
+$turquoise: #00616f;
+$cyan: #388691;
+$blue: #27225C;
+$purple: #4E3273;
+$red: #AB4032;
+$fuschia: #E258A6;
+$pink: #FFABDE;
+$razzmicBerry: #944E85;
+$warning-message: $red;
+
+/** Bulma Colours **/
+$primary: $red; //900
+$primary-700: $orange;
+$primary-500: $orange;
+$primary-200: $yellow;
+$primary-10: $white;
+
+$secondary: $orange;
+$secondary-700: $yellow;
+$secondary-500: $white;
+$secondary-200: #FFF;
+
+$link: $orange;
+$info: $pink;
+$success-dark: $razzmicBerry;
+$success-light: #C2D1CA;
+$success: $green;
+$warning: $yellow;
+$danger: $fuschia;
+$text: $black;
+$background: $white;
+$text-strong: $black;
+$light: $grey-light;

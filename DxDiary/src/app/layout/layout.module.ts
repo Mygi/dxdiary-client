@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TopMenuComponent } from './top-menu/top-menu.component';
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
 
 
 
@@ -10,6 +10,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ TopMenuComponent ]
 })
 export class LayoutModule { }
