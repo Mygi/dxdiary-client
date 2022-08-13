@@ -1,6 +1,6 @@
 {
   "name": "dx-diary",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,6 +20,9 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "bulma": "^0.9.4",
+    "bulma-calendar": "^6.1.18",
+    "bulma-dashboard": "^0.3.2",
+    "bulma-pageloader": "^0.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
