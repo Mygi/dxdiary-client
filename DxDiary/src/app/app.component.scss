@@ -1,0 +1,90 @@
+.brand {
+    top: 0px;
+    position: absolute;
+    height: 4rem;
+    width: 100%;
+    left: 0px;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+}
+.vertical-menu-spacer {
+    height: 3rem;
+}
+
+.user-menu {
+    top: 0px;
+    position: absolute;
+    height: 4rem;
+    width: 20rem;
+    left: 0px;
+    padding-top: 12px;
+    padding-left: 28px;
+}
+.navbar {
+    height: 4rem;
+}
+.animate {
+
+}
+.dashboard-main {
+    border-left: Solid 2px White;
+}
+.shrunk {
+    max-width: 4rem;
+    background-color: black !important;
+    .shrunk-header {
+        display: inline;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+    // .vertical-menu-spacer {
+    //     display: none;
+    // }
+    .dashboard-panel-content {
+        display: none;
+    }
+    .user-menu {
+        display: none;
+    }
+}
+.expanded {
+    background-color: White !important;
+    .shrunk-header {
+        display: none;
+    }
+    .icon-menu {
+        display: none;
+    }
+}
+
+.icon-menu {
+    margin-left: -2rem;
+    ul {
+        margin-left: 1rem;
+        li {
+            border-color: White;
+            border: 2px Solid white;
+            border-radius: 5px;
+            height: 2.3rem;
+            text-align: center;
+            width: 3rem;
+            margin-bottom:0.5rem;
+
+            a {
+                color: White;
+                
+            }
+        }
+    }
+    .icon-set {
+        margin-left: 1rem;
+        button {
+            width: 3rem;
+            height: 2.3rem;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom:0.5rem;
+        }
+    }
+}

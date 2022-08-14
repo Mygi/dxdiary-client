@@ -1,14 +1,80 @@
 <div class="dashboard is-full-height">
   <!-- left panel -->
-  <div class="dashboard-panel is-medium has-thick-padding has-background-grey-lighter is-hidden-mobile">
-    <header class="dashboard-panel-header">
-      <span class="close-nav">X</span>
-      <span class="has-text-centered">        
-        The Dx Diary
-      </span>
-    </header>
-
+  <div class="dashboard-panel is-medium has-background-grey-light is-hidden-mobile" [ngClass]="{'expanded': expanded, 'shrunk': !expanded}">
+    <div class="user-menu has-background-warning has-text-right">
+    <article class="media">      <!-- <span class="has-text-centered is-family-sans-serif is-size-2 has-text-white">The Dx Diary</span>              -->
+      <div class="media-content">
+        <div class="content">
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input is-primary" type="text" placeholder="Search">
+            </div>
+            <div class="control">
+              <a class="button is-primary is-outlined">
+                <span class="icon is-small has-text-primary">
+                  <i class="icofont-search icofont-1x"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="media-right">        
+        <button class="button is-ghost" (click)="expanded=!expanded">
+          <span class="icon is-small has-text-primary">
+            <i class="icofont-dotted-left icofont-2x"></i>
+          </span>
+        </button>
+      </div>
+    </article>
+   </div>
+    <div class="shrunk-header">
+      <button class="button is-ghost" (click)="expanded=!expanded">
+        <span class="icon is-small has-text-white">
+          <i class="icofont-navigation-menu icofont-2x"></i>
+        </span>
+      </button>
+    </div>
+    <div class="vertical-menu-spacer">
+      &nbsp;
+    </div>
+    <aside class="menu icon-menu has-text-white">      
+      <div class="icon-set">
+      <button class="button is-outlined is-white">
+        <span class="icon is-small has-text-white">
+          <i class="icofont-logout icofont-2x"></i>
+        </span>
+      </button>
+      <button class="button is-outlined  is-white">
+        <span class="icon is-small has-text-white">
+          <i class="icofont-bubble-left icofont-2x"></i>
+        </span>
+      </button>
+      <button class="button is-outlined is-white">
+        <span class="icon is-small has-text-white">
+          <i class="icofont-bubble-left icofont-2x"></i>
+        </span>
+      </button>
+      </div>
+      <ul class="menu-list">
+        <li><a>Au</a></li>          
+        <li><a>B</a></li>          
+        <li><a>Dx</a></li>
+        <li><a>Di</a></li>
+        <li><a>Ex</a></li>
+        <li><a>Me</a></li>
+        <li><a>Ob</a></li>
+        <li><a>Pa</a></li>
+        <li><a>St</a></li>
+      </ul>
+      <ul class="menu-list">
+        <li><a>T</a></li>          
+        <li><a>S</a></li>
+      </ul>
+    </aside>
+  
     <div class="dashboard-panel-content">
+   
       <aside class="menu has-text-white">
         <p class="menu-label">
           General
@@ -42,18 +108,42 @@
           <li><a>Last 3 Months</a></li>
           <li><a>Search</a></li>
         </ul>
+       
       </aside>
     </div>
   </div>
 
   <!-- main section -->
   <div class="dashboard-main is-scrollable">
-    <nav class="navbar is-fixed-top">
-      <div class="navbar-brand">
-        <span class="navbar-item">
-          User Menu
-        </span>
+    <nav class="navbar is-fixed-top has-background-black">
+      <div class="navbar-brand has-text-white">
+        <a class="navbar-item is-family-sans-serif is-size-2 has-text-white" href="https://bulma.io">
+          The Dx Diary
+        </a>
       </div>
+      <div class="navbar-menu">
+      <div class="navbar-end">
+       <article class="media mt-2">
+          <figure class="media-left">
+            <p class="image is-32x32 mt-2">
+              <img class="is-rounded" src="https://randomuser.me/api/portraits/women/88.jpg">
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content has-text-white is-size-4 mt-1">
+              Melissa Glenn
+              </div>
+          </div>    
+          <div class="media-right mt-1">
+            <button class="button is-ghost">
+              <span class="icon is-small has-text-white">
+                <i class="icofont-dotted-down icofont-1x"></i>
+              </span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
     </nav>
 
     <section class="section">
@@ -69,6 +159,6 @@
   </div>
 
   <!-- right panel -->
-  <div class="dashboard-panel is-small">
+  <!-- <div class="dashboard-panel is-small">
     Hello
-  </div>
+  </div> -->
