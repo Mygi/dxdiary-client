@@ -1,0 +1,949 @@
+{
+    "benchmarks": [
+        {
+        "date": "10-08-2022",
+        "Time": "15:14",
+        "Weight": 83.4,
+        "ankles": {
+            "left": 25.0,
+            "right:": 25.0
+        },
+        "thighs": {
+            "left": 57.5,
+            "right": 60.1
+
+        },
+        "wrists": {
+            "left": 17.7,
+            "right": 17.3
+        },
+        "biceps": {
+            "left": 33.5,
+            "right": 34.3
+        },
+        "hips": 97.1,
+        "waist": 84.9,
+        "underbust": 86.9,
+        "bust": 98.3,    
+        "neck": 36.9,
+        "shoulderWidth": 46.2,
+        "notes": "48 Hours HRT"       
+        },
+        {
+            "date": "11-08-2022",
+            "Time": "08:19",
+            "Weight": 82.8,
+            "ankles": {
+                "left": 23.8,
+                "right:": 24.5
+            },
+            "thighs": {
+                "left": 57.6,
+                "right": 60.6
+
+            },
+            "wrists": {
+                "left": 18.5,
+                "right": 17.7
+            },
+            "biceps": {
+                "left": 33.8,
+                "right": 34.3
+            },
+            "hips": 94,
+            "waist": 84.9,
+            "underbust": 89.5,
+            "bust": 96.4,    
+            "neck": 35.5,
+            "shoulderWidth": 46.6,
+            "notes": "68 Hours HRT"
+        },        
+        {
+            "date": "17-08-2022",
+            "Time": "13:04",
+            "Weight": 82.8,
+            "ankles": {
+                "left": 23.5,
+                "right:": 24.1
+            },
+            "calves": {
+                "left": 41.0,
+                "right:": 41.8
+            },
+            "thighs": {
+                "left": 57.3,
+                "right": 60.4
+
+            },
+            "wrists": {
+                "left": 18.5,
+                "right": 17.7
+            },
+            "biceps": {
+                "left": 34.1,
+                "right": 35.6
+            },
+            "areola_diameter": {
+                "left": 34.1,
+                "right": 2.4
+            },
+            "nipple_diameter": {
+                "left": 0.4,
+                "right": 0.4
+            },
+            "hips": 97.1,
+            "waist": 84.6,
+            "underbust": 88.3,
+            "bust": 100.1,    
+            "neck": 38.5,
+            "shoulderWidth": 44.5,
+            "notes": "9 Days post HRT"
+        },
+        {
+            "date": "01-09-2022",
+            "Time": "15:34",
+            "Weight": 81.6,
+            "ankles": {
+                "left": 23.5,
+                "right:": 23.7
+            },
+            "calves": {
+                "left": 40.0,
+                "right:": 41
+            },
+            "thighs": {
+                "left": 60.1,
+                "right": 61
+
+            },
+            "wrists": {
+                "left": 18.0,
+                "right": 16.3
+            },
+            "biceps": {
+                "left": 33.5,
+                "right": 33.8
+            },
+            "areola_diameter": {
+                "left": 3.1,
+                "right": 3.5
+            },
+            "nipple_diameter": {
+                "left": 0.6,
+                "right": 0.7
+            },
+            "hips": 95.8,
+            "waist": 81,
+            "underbust": 89.5,
+            "bust": 99.8,    
+            "neck": 36.4,
+            "shoulderWidth": 53.4,
+            "notes": "Post Bath. 24 Days post HRT"
+        },
+        {
+            "date": "16-09-2022",
+            "Time": "14:10",
+            "Weight": 82.9,
+            "ankles": {
+                "left": 23.8,
+                "right:": 23.8
+            },
+            "calves": {
+                "left": 39.8,
+                "right:": 41.5
+            },
+            "thighs": {
+                "left": 59,
+                "right": 60.5
+
+            },
+            "wrists": {
+                "left": 18.2,
+                "right": 16.8
+            },
+            "biceps": {
+                "left": 34.8,
+                "right": 35
+            },
+            "areola_diameter": {
+                "left": 3.6,
+                "right": 3.5
+            },
+            "nipple_diameter": {
+                "left": 0.6,
+                "right": 0.6
+            },
+            "hips": 97,
+            "waist": 79.8,
+            "underbust": 87.3,
+            "bust": 99.8,    
+            "neck": 36.8,
+            "shoulderWidth": 54.1,
+            "notes": "Post Bath. 24 Days post HRT"
+        },
+        {
+            "date": "22-09-2022",
+            "Time": "08:20",
+            "Weight": 80.7,
+            "ankles": {
+                "left": 22.8,
+                "right:": 22.9
+            },
+            "calves": {
+                "left": 39.9,
+                "right:": 40.6
+            },
+            "thighs": {
+                "left": 57.3,
+                "right": 59.6
+
+            },
+            "wrists": {
+                "left": 18.0,
+                "right": 16.4
+            },
+            "biceps": {
+                "left": 34.2,
+                "right": 35
+            },
+            "areola_diameter": {
+                "left": 3.3,
+                "right": 3
+            },
+            "nipple_diameter": {
+                "left": 0.7,
+                "right": 0.6
+            },
+            "hips": 95.8,
+            "waist": 79.5,
+            "waist-expiration": 83,
+            "underbust": 86.2,
+            "bust": 96.5,    
+            "neck": 36.6,
+            "shoulderWidth": 54.1,
+            "notes": "Post Dx. 45 Days post HRT"
+        }
+    ],    
+    "augmentations": [
+        {
+            "date": "12-08-2022",
+            "type": "waist-training",
+            "start_time": "08:10",
+            "end_time": "13:10",
+            "notes": "latex corset - 1st set of rings"
+        },
+        {
+            "date": "12-08-2022",
+            "type": "waist-training",
+            "start_time": "14:10",
+            "end_time": "17:30",
+            "notes": "steel boned full length corset - lightly tightened"
+        },
+        {
+            "date": "12-08-2022",
+            "type": "waist-training",
+            "start_time": "21:15",
+            "end_time": "",
+            "notes": "100mcg estradiol"
+        }
+    ],
+    "administered_medications": [
+        {
+            "drug": "Aranesp",
+            "uom": "ug",
+            "dose": 80,
+            "date": "10-08-2022 20:30"
+        },
+        {
+            "drug": "Iron Polymaltose",
+            "uom": "mg",
+            "dose": 80,
+            "date": "10-08-2022 20:30"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "08-08-2022 12:45"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "10-08-2022 11:50"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "12-08-2022 21:00"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "15-08-2022 06:30"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "18-08-2022 09:30"
+        },
+        {
+            "drug": "Aranesp",
+            "dose": "80",
+            "uom": "ug",   
+            "date": "18-08-2022 21:10"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "21-08-2022 10:30"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "24-08-2022 10:30"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "27-08-2022 10:30"
+        },
+        {
+            "drug": "Estradiol",
+            "dose": "100",
+            "uom": "mg",   
+            "date": "30-08-2022 10:30"
+        },
+        {
+            "drug": "Aranesp",
+            "dose": "80",
+            "uom": "ug",   
+            "date": "31-08-2022 21:10"
+        }
+    ],
+    "dialysis": [
+        {
+            "date": "12-08-2022",
+            "start_time": "21:30",
+            "duration_hours": 8,
+            "qb": 250,
+            "qf": 300,
+            "temp": 36.7,
+            "venous_pressure": 87,
+            "arterial_pressure": 98,
+            "uf_litres": 2.4,
+            "avg_tmp": 3,
+            "notes": "Couldn't sleep from 2am. Very warm."
+        },
+        {
+            "date": "14-08-2022",
+            "start_time": "20:30",
+            "duration_hours": 8.2,
+            "qb": 250,
+            "qf": 300,
+            "temp": 36.6,
+            "venous_pressure": 78,
+            "arterial_pressure": 91,
+            "uf_litres": 1.5,
+            "avg_tmp": 3,
+            "notes": "Couldn't sleep from 3:30am. Warm."
+        },
+        {
+            "date": "16-08-2022",
+            "start_time": "21:10",
+            "duration_hours": 8.2,
+            "qb": 245,
+            "qf": 306,
+            "temp": 36.6,
+            "venous_pressure": 64,
+            "arterial_pressure": -98,
+            "uf_litres": 1.23,
+            "avg_tmp": 36.6,
+            "notes": "Couldn't sleep from 3:00am. Warm. No heater",
+            "blood_volume_ltr": 116
+        },
+        {
+            "date": "18-08-2022",
+            "start_time": "20:50",
+            "duration_hours": 7.9,
+            "qb": 245,
+            "qf": 306,
+            "temp": 36.6,
+            "venous_pressure": 64,
+            "arterial_pressure": -98,
+            "uf_litres": 2.5,
+            "avg_tmp": 36.6,
+            "notes": "Slept well. Less clothes. Heater",
+            "blood_volume_ltr": 116  
+        },
+        {
+            "date": "20-08-2022",
+            "start_time": "20:30",
+            "duration_hours": 8,
+            "qb": 245,
+            "qf": 298,
+            "temp": 36.6,
+            "venous_pressure": 74,
+            "arterial_pressure": -102,
+            "uf_litres": 3.2,
+            "avg_tmp": 36.6,
+            "notes": "Slep well. Less clothes. Heater.",
+            "blood_volume_ltr": 116  
+        },
+        {
+            "date": "21-08-2022",
+            "start_time": "20:50",
+            "duration_hours": 8,
+            "qb": 245,
+            "qf": 302,
+            "temp": 36.6,
+            "venous_pressure": 71,
+            "arterial_pressure": -98,
+            "uf_litres": 2.3,
+            "avg_tmp": 36.6,
+            "notes": "Machine left in place. Not cold - but hard to sleep due to distance from machine. Heater",
+            "blood_volume_ltr": 116  
+        },
+        {
+            "date": "30-08-2022",
+            "start_time": "20:50",
+            "duration_hours": 8,
+            "qb": 245,
+            "qf": 302,
+            "temp": 36.6,
+            "venous_pressure": 71,
+            "arterial_pressure": -98,
+            "uf_litres": 2.3,
+            "avg_tmp": 36.6,
+            "notes": "",
+            "blood_volume_ltr": 116  
+        },
+        {
+            "date": "01-09-2022",
+            "start_time": "03:40",
+            "duration_hours": 6.25,
+            "qb": 260,
+            "qf": 400,
+            "temp": 36.5,
+            "venous_pressure": 71,
+            "arterial_pressure": -98,
+            "uf_litres": 2.65,
+            "avg_tmp": 36.6,
+            "notes": "Late night",
+            "blood_volume_ltr": 112
+        }
+    ],
+    "strength": [
+        {
+            "date": "12-08-2022",
+            "time": "15:30",
+            "avg_heart_rate": 0,
+            "squats": 20,
+            "push_ups": 20,
+            "situps": 0,
+            "side_bins_each": 15,
+            "plank_seconds": 95,
+            "wall_sit_seconds": 0,
+            "notes": "In corset training",
+            "heal_lifts": 15,
+            "ham_string_raise_each": 15,
+            "adductor_lifts_each": 15,
+            "duration_minutes": 7    
+        },
+        {
+            "date": "13-08-2022",
+            "time": "11:30",
+            "duration_minutes": 7, 
+            "avg_heart_rate": 92,
+            "squats": 20,
+            "push_ups": 20,
+            "situps": 20,
+            "side_bins_each": 15,
+            "plank_seconds": 95,
+            "wall_sit_seconds": 55,
+            "notes": "",
+            "heal_lifts": 20,
+            "ham_string_raise_each": 15,
+            "adductor_lifts_each": 15     
+        },
+        {
+            "date": "14-08-2022",
+            "time": "19:30",
+            "duration_minutes": 8.5, 
+            "avg_heart_rate": 135,
+            "squats": 20,
+            "push_ups": 20,
+            "situps": 20,
+            "side_bins_each": 20,
+            "plank_seconds": 95,
+            "wall_sit_seconds": 55,
+            "notes": "",
+            "heal_lifts": 20,
+            "ham_string_raise_each": 20,
+            "adductor_lifts_each": 20,
+            "back_lifts": 20     
+        },
+        {
+            "date": "15-08-2022",
+            "time": "05:50",
+            "duration_minutes": 12, 
+            "avg_heart_rate": 125,
+            "peak_heart_rate": 154,
+            "squats": 20,
+            "push_ups": 20,
+            "situps": 20,
+            "side_bins_each": 20,
+            "plank_seconds": 100,
+            "wall_sit_seconds": 55,
+            "notes": "",
+            "heal_lifts": 20,
+            "ham_string_raise_each": 20,
+            "adductor_lifts_each": 20,
+            "back_lifts": 20    
+        },        
+        {
+            "date": "17-08-2022",
+            "time": "20:57",
+            "duration_minutes": 8.8, 
+            "avg_heart_rate": 113,
+            "peak_heart_rate": 133,
+            "squats": 30,
+            "push_ups": 20,
+            "situps": 20,
+            "side_bins_each": 20,
+            "plank_seconds": 90,
+            "wall_sit_seconds": 55,
+            "notes": "",
+            "heal_lifts": 30,
+            "ham_string_raise_each": 20,
+            "adductor_lifts_each": 20,
+            "back_lifts": 20,
+            "banded_chest_press": 20    
+        },
+        {
+            "date": "18-08-2022",
+            "time": "14:09",
+            "duration_minutes": 14, 
+            "avg_heart_rate": 133,
+            "peak_heart_rate": 156,
+            "squats": 30,
+            "push_ups": 20,
+            "situps": 20,
+            "side_bins_each": 20,
+            "plank_seconds": 90,
+            "wall_sit_seconds":120,
+            "notes": "",
+            "heal_lifts": 30,
+            "ham_string_raise_each": 20,
+            "adductor_lifts_each": 20,
+            "back_lifts": 20,
+            "banded_chest_press": 20,
+            "lower_core": 20    
+        },
+        {
+            "date": "20-08-2022",
+            "time": "07:48",
+            "duration_minutes": 13.7, 
+            "avg_heart_rate": 113,
+            "peak_heart_rate": 139,
+            "squats": 40,
+            "push_ups": 20,
+            "situps": 20,
+            "side_bins_each": 20,
+            "plank_seconds": 90,
+            "wall_sit_seconds":120,
+            "notes": "",
+            "heal_lifts": 30,
+            "ham_string_raise_each": 20,
+            "adductor_lifts_each": 20,
+            "back_lifts": 20,
+            "banded_chest_press": 0,
+            "lower_core": 20    
+        },
+        {
+            "date": "21-08-2022",
+            "time": "20:00",
+            "duration_minutes": 10, 
+            "avg_heart_rate": 108,
+            "peak_heart_rate": 126,
+            "squats": 30,
+            "push_ups": 20,
+            "situps": 20,
+            "side_bins_each": 20,
+            "plank_seconds": 80,
+            "wall_sit_seconds":60,
+            "notes": "",
+            "heal_lifts": 30,
+            "ham_string_raise_each": 20,
+            "adductor_lifts_each": 20,
+            "back_lifts": 20,
+            "banded_chest_press": 0,
+            "lower_core": 20    
+        }
+    ],
+    "exercize": [
+        {
+            "date": "12-08-2022",
+            "time": "17:30",
+            "duration_minutes": 33,
+            "type": "basketball practices",
+            "avg_heart_rate": 164 
+        },
+        {
+            "date": "12-08-2022",
+            "time": "18:10",
+            "duration_minutes": 8,
+            "type": "soccer practices",
+            "avg_heart_rate": 164 
+        },
+        {
+            "date": "15-08-2022",
+            "time": "06:10",
+            "duration_minutes": 11,
+            "type": "outdoor run",
+            "avg_heart_rate": 164,
+            "distance_km": 1.74,
+            "avg_cadence": 167
+        },
+        {
+            "date": "16-08-2022",
+            "time": "13:13",
+            "duration_minutes": 12.5,
+            "type": "indoor run",
+            "avg_heart_rate": 155,
+            "peak_heart_rate": 169,
+            "distance_km": 1.83,
+            "avg_cadence": 158
+        },
+        {
+            "date": "16-08-2022",
+            "time": "15:33",
+            "duration_minutes": 47.5,
+            "type": "basketball",
+            "avg_heart_rate": 155,
+            "peak_heart_rate": 169
+        },
+        {
+            "date": "17-08-2022",
+            "time": "09:50",
+            "duration_minutes": 25,
+            "type": "bikeride",
+            "avg_heart_rate": 134,
+            "peak_heart_rate": 152,
+            "distance_km": 5.6
+        },
+        {
+            "date": "18-08-2022",
+            "time": "09:50",
+            "duration_minutes": 15.4,
+            "type": "indoor run",
+            "avg_heart_rate": 152,
+            "peak_heart_rate": 168,
+            "distance_km": 2.19,
+            "avg_cadence": 157
+        },
+        {
+            "date": "19-08-2022",
+            "time": "06:20",
+            "duration_minutes": 25,
+            "type": "outdoor run",
+            "avg_heart_rate": 174,
+            "peak_heart_rate": 180,
+            "distance_km": 1.85,
+            "avg_cadence": 173
+        },
+        {
+            "date": "20-08-2022",
+            "time": "08:10",
+            "duration_minutes": 17.2,
+            "type": "outdoor run",
+            "avg_heart_rate": 154,
+            "peak_heart_rate": 170,
+            "distance_km": 2.45,
+            "avg_cadence": 153
+        }
+    ],
+    "diet": [
+        {
+            "date": "13-08-2022",
+            "meals": [
+                {
+                    "description": "Avocado and Cream Cheese on Toast",
+                    "amount": "2 Slices",
+                    "weight_gm": null
+                },
+                {
+                    "description": "Chcken Curry Mee",
+                    "amount": "Whole bowl of soup with noodles",
+                    "weight_gm": 450
+                },
+                {
+                    "description": "BBQ Chicken Wing",
+                    "amount": "Three wings",
+                    "weight_gm": 60
+                }
+
+            ],
+            "snacks": [
+
+            ],
+            "drinks": [
+                {
+                    "description": "Espresso Coffee with milk and 1 sugar",
+                    "volume_mls": 250
+
+                },
+                {
+                    "description": "English Breakfast tea with milk",
+                    "volume_mls": 250
+                },
+                {
+                    "description": "water",
+                    "volume_mls": 280
+                }
+            ]
+        }
+    ],
+    "obs": [
+        {
+            "date": "10-08-2022",
+            "Time": "15:14",
+            "Weight": 83.4,
+            "diastolic": 57,
+            "systolic": 96,
+            "pulse": 72,
+            "oxygenSaturation": 100,                    
+            "PostDxHours": 23,    
+            "temperature":36.6
+        },
+        {
+            "date": "11-08-2022",
+            "Time": "08:19",
+            "Weight": 82.8,
+            "PostDxHours": 4,
+            "diastolic": 56,
+            "systolic": 98,
+            "pulse": 63,
+            "oxygenSaturation": 100
+        },
+        {
+            "date": "13-08-2022",
+            "time": "11:50",
+            "systolic": 89,
+            "diastolic": 50,
+            "pulse": 71,
+            "oxygenSaturation": 98,
+            "Weight": 81.9,
+            "temperature":36.6,
+            "PostDxHours": 6
+        },
+        {
+            "date": "14-08-2022",
+            "time": "20:30",
+            "systolic": 106,
+            "diastolic": 54,
+            "pulse": 80,
+            "oxygenSaturation": 99,
+            "Weight": 84.9,
+            "temperature":36.6,
+            "PostDxHours": 38
+        },
+        {
+            "date": "15-08-2022",
+            "time": "07:30",
+            "systolic": 105,
+            "diastolic": 50,
+            "pulse": 66,
+            "oxygenSaturation": 99,
+            "Weight": 83.1,
+            "temperature":36.6,
+            "PostDxHours": 1
+        },        
+        {
+            "date": "16-08-2022",
+            "time": "12:14",
+            "systolic": 113,
+            "diastolic": 60,
+            "pulse": 60,
+            "oxygenSaturation": 98,
+            "Weight": 84.1,
+            "temperature":36.1,
+            "notes": "pre bath / run",
+            "PostDxHours": 30
+        },
+        {
+            "date": "16-08-2022",
+            "time": "14:00",
+            "systolic": 98,
+            "diastolic": 62,
+            "pulse": 88,
+            "oxygenSaturation": 100 ,
+            "Weight": 83.2,
+            "temperature":36.6,
+            "Notes": "Post bath / run",
+            "PostDxHours": 32
+        },
+        {
+            "date": "17-08-2022",
+            "time": "05:30",
+            "systolic": 102,
+            "diastolic": 51,
+            "pulse": 65,
+            "oxygenSaturation": 97,
+            "Weight": 83.1,
+            "temperature":36.3,
+            "Notes": "Post Dx",
+            "PostDxHours": 1
+        },
+        {
+            "date": "18-08-2022",
+            "time": "20:30",
+            "systolic": 105,
+            "diastolic": 60,
+            "pulse": 80,
+            "oxygenSaturation": 0,
+            "Weight": 84.7,
+            "temperature":0,
+            "Notes": "Pre Dx",
+            "PostDxHours": 39
+        },
+        {
+            "date": "19-08-2022",
+            "time": "06:00",
+            "systolic": 118,
+            "diastolic": 62,
+            "pulse": 65,
+            "oxygenSaturation": 0,
+            "Weight": 82.6,
+            "temperature":36.6,
+            "Notes": "Post Dx",
+            "PostDxHours": 1.5
+        },
+        {
+            "date": "20-08-2022",
+            "time": "09:10",
+            "systolic": 101,
+            "diastolic": 59,
+            "pulse": 87,
+            "oxygenSaturation": 98,
+            "Weight": 84.3,
+            "temperature":36.7,
+            "Notes": "Post Run",
+            "PostDxHours": 27
+        },
+        {
+            "date": "21-08-2022",
+            "time": "20:40",
+            "systolic": 104,
+            "diastolic": 64,
+            "pulse": 76,
+            "oxygenSaturation": 100,
+            "Weight": 84.5,
+            "temperature":0,
+            "Notes": "Pre Dx, Post Strength",
+            "PostDxHours": 40
+        },
+        {
+            "date": "22-08-2022",
+            "time": "07:00",
+            "systolic": 98,
+            "diastolic": 56,
+            "pulse": 64,
+            "oxygenSaturation": 100,
+            "Weight": 82.7,
+            "temperature":36.6,
+            "Notes": "Post Dx and coffee.",
+            "PostDxHours": 1.2
+        },
+        {
+            "date": "26-08-2022",
+            "time": "05:45",
+            "systolic": 95,
+            "diastolic": 62,
+            "pulse": 73,
+            "oxygenSaturation": 100,
+            "Weight": 82.6,
+            "temperature":36.6,
+            "Notes": "",
+            "PostDxHours": 24
+        },
+        {
+            "date": "26-08-2022",
+            "time": "20:30",
+            "systolic": 98,
+            "diastolic": 57,
+            "pulse": 77,
+            "oxygenSaturation": 100,
+            "Weight": 84.1,
+            "temperature":36.6,
+            "Notes": "",
+            "PostDxHours": 38
+        },
+        {
+            "date": "27-08-2022",
+            "time": "05:40",
+            "systolic": 105,
+            "diastolic": 60,
+            "pulse": 60,
+            "oxygenSaturation": 100,
+            "Weight": 82.2,
+            "temperature":36.6,
+            "Notes": "",
+            "PostDxHours": 1
+        },
+        {
+            "date": "27-08-2022",
+            "time": "16:05",
+            "systolic": 87,
+            "diastolic": 56,
+            "pulse": 70,
+            "oxygenSaturation": 100,
+            "Weight": 81.5,
+            "temperature":36.6,
+            "Notes": "",
+            "PostDxHours": 10
+        },
+        {
+            "date": "01-09-2022",
+            "time": "10:20",
+            "systolic": 98,
+            "diastolic": 58,
+            "pulse": 74,
+            "oxygenSaturation": 100,
+            "Weight": 81.6,
+            "temperature":36.9,
+            "Notes": "Post Dx.",
+            "PostDxHours": 1.2  
+        },
+        {
+            "date": "16-09-2022",
+            "time": "14:20",
+            "systolic": 102,
+            "diastolic": 60,
+            "pulse": 76,
+            "oxygenSaturation": 100,
+            "Weight": 82.8,
+            "temperature":36.4,
+            "Notes": "Post Dx.",
+            "PostDxHours": 34  
+        },
+        {
+            "date": "22-09-2022",
+            "time": "07:20",
+            "systolic": 99,
+            "diastolic": 56,
+            "pulse": 66,
+            "oxygenSaturation": 99,
+            "Weight": 80.7,
+            "temperature":36.4,
+            "Notes": "Post Dx.",
+            "PostDxHours": 1  
+        }
+    ]
+} 
