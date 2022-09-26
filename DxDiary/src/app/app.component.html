@@ -147,9 +147,18 @@
     </nav>
 
     <section class="section">
-      <p class="title">
-        Main
-      </p>
+      <div class="tags are-medium">
+        <span class="tag is-primary" (click)="navigate('dialysis')">Dialysis</span>
+        <span class="tag is-link" (click)="navigate('augment')">Augment</span>
+        <span class="tag is-link" (click)="navigate('diet')">Diet</span>
+        <span class="tag is-link" (click)="navigate('strength')">Strength</span>
+        <span class="tag is-link" (click)="navigate('exercise')">Exercize</span>
+        <span class="tag is-link" (click)="navigate('benchmark')">Benchmark</span>
+        <span class="tag is-link" (click)="navigate('medication')">Medication</span>
+        <span class="tag is-link" (click)="navigate('obs')">Observations</span>
+      </div>
+      <router-outlet></router-outlet>
+      
     </section>
 
     <!-- the footer will take up all unused space at the bottom -->
