@@ -1,1 +1,43 @@
-<p>dialysis-history works!</p>
+
+<div class="example-table-container mat-elevation-z8">
+<table mat-table [dataSource]="history" matSort matSortActive="dateValue" matSortDisableClear 
+    matSortDirection="desc" class="history-table">
+    <ng-container matColumnDef="dateValue">
+        <th mat-header-cell *matHeaderCellDef> Date</th>
+        <td mat-cell *matCellDef="let element"> {{element.dateValue | date: 'fullDate'}} @ {{element.start_time}}</td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="duration_hours">
+        <th mat-header-cell *matHeaderCellDef> Blood Volume </th>
+        <td mat-cell *matCellDef="let element"> {{(element.duration_hours * element.qb * 60) / 1000 | number: '1.2-2'}} Ltrs </td>
+      </ng-container>
+      <ng-container matColumnDef="qf">
+        <th mat-header-cell *matHeaderCellDef> Dialysate Flow </th>
+        <td mat-cell *matCellDef="let element"> {{element.qf}} </td>
+      </ng-container>
+      <ng-container matColumnDef="temp">
+        <th mat-header-cell *matHeaderCellDef> Temperature </th>
+        <td mat-cell *matCellDef="let element"> {{element.temp}} </td>
+      </ng-container>
+      <ng-container matColumnDef="venous_pressure">
+        <th mat-header-cell *matHeaderCellDef> Venous Pressure </th>
+        <td mat-cell *matCellDef="let element"> {{element.venous_pressure}} </td>
+      </ng-container>
+      <ng-container matColumnDef="arterial_pressure">
+        <th mat-header-cell *matHeaderCellDef> Arterial Pressure </th>
+        <td mat-cell *matCellDef="let element"> {{element.arterial_pressure}} </td>
+      </ng-container>
+      <ng-container matColumnDef="uf_litres">
+        <th mat-header-cell *matHeaderCellDef> UF Volume </th>
+        <td mat-cell *matCellDef="let element"> {{element.uf_litres}} </td>
+      </ng-container>
+      <ng-container matColumnDef="avg_tmp">
+        <th mat-header-cell *matHeaderCellDef> Trans-membrane pressure </th>
+        <td mat-cell *matCellDef="let element"> {{element.avg_tmp}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+</table>
+<mat-paginator [length]="resultsLength" [pageSize]="30" aria-label="Select page of GitHub search results"></mat-paginator>
+</div>  
