@@ -10,6 +10,7 @@ import { DialysisRoutingModule } from './dialysis-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DialysisService } from './services/dialysis.service';
 import { MatSortModule } from '@angular/material/sort';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatSortModule } from '@angular/material/sort';
     DialysisRoutingModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSliderModule
   ],
   providers: [
     DialysisService

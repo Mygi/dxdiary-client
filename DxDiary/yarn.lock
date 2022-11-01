@@ -2152,13 +2152,6 @@ builtins@^5.0.0:
   dependencies:
     semver "^7.0.0"
 
-bulma-calendar@^6.1.18:
-  version "6.1.18"
-  resolved "https://registry.yarnpkg.com/bulma-calendar/-/bulma-calendar-6.1.18.tgz#59793a9f2658c51c2e8bc49b04e227bf4c5c5c0d"
-  integrity sha512-7yXo7YTNxx3adrPdBBWdWEuxvowpTjJcfpRuEj7lqK52LWb79CjG9F6uKxUpB5DSguUyKflHnimRsRjjQJgZlw==
-  dependencies:
-    date-fns "^2.21.3"
-
 bulma-dashboard@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/bulma-dashboard/-/bulma-dashboard-0.3.2.tgz#bdc9d66829eef15eed84825b7d29211437242a02"
@@ -2595,11 +2588,6 @@ custom-event@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/custom-event/-/custom-event-1.0.1.tgz#5d02a46850adf1b4a317946a3928fccb5bfd0425"
   integrity sha512-GAj5FOq0Hd+RsCGVJxZuKaIDXDf3h6GQoNEjFgbLLI/trgtavwUbSnZ5pVfg27DVCaWjIohryS0JFwIJyT2cMg==
-
-date-fns@^2.21.3:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.1.tgz#9667c2615525e552b5135a3116b95b1961456e60"
-  integrity sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==
 
 date-format@^4.0.13:
   version "4.0.13"

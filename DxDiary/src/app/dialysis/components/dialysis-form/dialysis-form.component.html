@@ -1,0 +1,99 @@
+<div class="two-column-form">
+    <div class="columns">
+        <div class="column field-name">
+            Date
+        </div>
+        <div class="column">
+            <input type="date" class="rounded" />
+        </div>
+    </div>   
+    <div class="columns">
+        <div class="column field-name">
+            Start Time
+        </div>
+        <div class="column">
+            <input type="time" class="rounded" />
+        </div>
+        <div class="column field-name">
+            End Time
+        </div>
+        <div class="column">
+            <input type="time" class="rounded" />
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column field-name">
+            Duration
+        </div>
+        <div class="column">
+            <div class="custom-slider">
+                <ngx-slider [(value)]="duration" [options]="durationOptions"></ngx-slider>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column field-name">
+            UF Volume
+        </div>
+        <div class="column">
+            <div class="custom-slider">
+                <ngx-slider [(value)]="ufVolume" [options]="ufOptions"></ngx-slider>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column field-name">
+            Flow Rates
+        </div>
+        <div class="column">
+            <div class="custom-slider">
+                <ngx-slider [(value)]="bloodFlowRate" [(highValue)]="fluidFlowRate" [options]="flowRateOptions"></ngx-slider>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column field-name">
+            Venous / Arterial Pressures
+        </div>
+        <div class="column">
+            <div class="custom-slider">
+                <ngx-slider [(value)]="venousPressure" [(highValue)]="arterialPressure" [options]="options"></ngx-slider>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column field-name">
+            Trans membrane Pressure
+        </div>
+        <div class="column">
+            <div class="custom-slider">
+                <ngx-slider [(value)]="transMembranePressure" [options]="tmpOptions"></ngx-slider>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column field-name">
+            Temperature (Celsius)
+        </div>
+        <div class="column">
+            <div class="custom-slider">
+                <ngx-slider [(value)]="temperature" [options]="temperatureOptions"></ngx-slider>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column field-name">
+            Notes
+        </div>
+        <div class="column">
+            <div class="custom-slider">
+                <textarea class="is-primary textarea" placeholder="e.g. Hello world"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column button-column is-pulled-right is-full">
+            <button class="button is-primary is-rounded">Save</button>
+        </div>
+    </div>
+</div>

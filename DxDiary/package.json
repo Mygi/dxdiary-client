@@ -22,7 +22,6 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "bulma": "^0.9.4",
-    "bulma-calendar": "^6.1.18",
     "bulma-dashboard": "^0.3.2",
     "bulma-pageloader": "^0.3.0",
     "rxjs": "~7.5.0",

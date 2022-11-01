@@ -222,6 +222,91 @@
             "neck": 36.6,
             "shoulderWidth": 54.1,
             "notes": "Post Dx. 45 Days post HRT"
+        },
+        {
+            "date": "26-10-2022",
+            "Time": "13:37",
+            "Weight": 83.9,
+            "ankles": {
+                "left": 23.8,
+                "right:": 24
+            },
+            "calves": {
+                "left": 41,
+                "right:": 41.2
+            },
+            "thighs": {
+                "left": 59,
+                "right": 61
+
+            },
+            "wrists": {
+                "left": 18.4,
+                "right": 16.5
+            },
+            "biceps": {
+                "left": 34.2,
+                "right": 35.5
+            },
+            "areola_diameter": {
+                "left": 4,
+                "right": 4
+            },
+            "nipple_diameter": {
+                "left": 0.7,
+                "right": 0.7
+            },
+            "hips": 98,
+            "waist": 79.5,
+            "waist-expiration": 83,
+            "underbust": 89.5,
+            "bust": 101.8,    
+            "neck": 37.6,
+            "shoulderWidth": 55,
+            "notes": "32hrs Post Dx. 79 Days post HRT"
+        },
+        {
+	        "date": "27-10-2022",
+            "Time": "06:13",
+            "Weight": 80.8,
+            "ankles": {
+                "left": 23.2,
+                "right:": 23.6
+            },
+            "calves": {
+                "left": 39,
+                "right:": 39.8
+            },
+            "thighs": {
+                "left": 58.5,
+                "right": 60.5
+            },
+            "wrists": {
+                "left": 17.5,
+                "right": 15.8
+            },
+            "biceps": {
+                "left": 34.8,
+                "right": 34.8
+            },
+            "areola_diameter": {
+                "left": 3.8,
+                "right": 3.8
+            },
+            "nipple_diameter": {
+                "left": 0.7,
+                "right": 0.7
+            },
+            "hips": 96,
+            "waist": 78,
+            "waist-expiration": 83,
+            "underbust": 86,
+            "bust": 99.5,    
+            "neck": 35.8,
+            "shoulderWidth": 55,
+            "genitals": 10,
+            "genitals_peak":14.5,
+            "notes": "3hrs Post Dx. 80 Days post HRT"
         }
     ],    
     "augmentations": [
