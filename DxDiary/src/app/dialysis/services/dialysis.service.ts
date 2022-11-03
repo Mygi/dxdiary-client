@@ -3,12 +3,14 @@ import {HttpClient} from '@angular/common/http';
 import { DialysisSession } from '../models/dialysis';
 import { Observable, map } from 'rxjs';
 import { SortDirection} from '@angular/material/sort';
+import { DialysisRegime } from '../models/dialysis-regime';
 @Injectable({
   providedIn: 'root'
 })
 export class DialysisService {
 
   private dxUrl = "/assets/data/dialysis.json";
+  private dxRegimeUrl = "/assets/data/dialysis-regime.json"
   constructor(private _http: HttpClient) { }
 
   /**
@@ -33,6 +35,9 @@ export class DialysisService {
                           return 0;
                         }).slice(page * pageSize, pageSize)
                       }));
+  }
+  public getRegime(userId: string): Observable<DialysisRegime> {
+    return this._http.get<DialysisRegime>(this.dxRegimeUrl)
   }
   //public addSession
 }

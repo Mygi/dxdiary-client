@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Options } from '@angular-slider/ngx-slider';
+import { DialysisService } from '../../services/dialysis.service';
+import { first } from 'rxjs';
+import { DialysisRegime } from '../../models/dialysis-regime';
 @Component({
   selector: 'app-dialysis-form',
   templateUrl: './dialysis-form.component.html',
@@ -48,9 +51,17 @@ export class DialysisFormComponent implements OnInit {
     ceil: 37.5,
     step: 0.1
   };
-  constructor() { }
+  private regime = new DialysisRegime()
+  constructor(private dxService: DialysisService) { }
 
   ngOnInit(): void {
+    this.dxService.getRegime("").pipe(first()).subscribe( result => {
+      this.regime = result;
+      this.temperature = this.regime.temperature;
+      this.bloodFlowRate = this.regime.qb.flow;
+      this.duration = this.regime.durationHours;
+      this.fluidFlowRate = this.regime.qf.flow;
+    })
   }
 
 }
