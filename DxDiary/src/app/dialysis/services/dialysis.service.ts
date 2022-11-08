@@ -40,4 +40,7 @@ export class DialysisService {
     return this._http.get<DialysisRegime>(this.dxRegimeUrl)
   }
   //public addSession
+  public saveSession(session: DialysisSession): Observable<DialysisSession> {
+    return this._http.post<DialysisSession>(this.dxUrl, session);
+  }
 }

@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DialysisService } from './services/dialysis.service';
 import { MatSortModule } from '@angular/material/sort';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
-    NgxSliderModule
+    NgxSliderModule,
+    ReactiveFormsModule
   ],
   providers: [
     DialysisService

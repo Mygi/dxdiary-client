@@ -1,24 +1,19 @@
+<form [formGroup]="dialysisForm" (ngSubmit)="saveSession()">
 <div class="two-column-form">
     <div class="columns">
         <div class="column field-name">
             Date
         </div>
         <div class="column">
-            <input type="date" class="rounded" />
+            <input type="datetime-local" formControlName="sessionDate" class="rounded" />
         </div>
     </div>   
     <div class="columns">
         <div class="column field-name">
-            Start Time
+            Actual End Time
         </div>
         <div class="column">
-            <input type="time" class="rounded" />
-        </div>
-        <div class="column field-name">
-            End Time
-        </div>
-        <div class="column">
-            <input type="time" class="rounded" />
+            <input type="time" formControlName="endTime" class="rounded" />
         </div>
     </div>
     <div class="columns">
@@ -87,13 +82,14 @@
         </div>
         <div class="column">
             <div class="custom-slider">
-                <textarea class="is-primary textarea" placeholder="e.g. Hello world"></textarea>
+                <textarea formControlName="notes"  class="is-primary textarea" placeholder="e.g. Hello world"></textarea>
             </div>
         </div>
     </div>
     <div class="columns">
         <div class="column button-column is-pulled-right is-full">
-            <button class="button is-primary is-rounded">Save</button>
+            <button type="submit" class="button is-primary is-rounded">Save</button>
         </div>
     </div>
 </div>
+</form>

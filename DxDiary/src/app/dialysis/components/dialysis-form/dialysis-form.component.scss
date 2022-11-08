@@ -11,7 +11,7 @@
     .columns:nth-child(even) {
         background-color: rgba(255,255,255,0.9);
     } 
-    input[type="date"] {
+    input[type="datetime-local"] {
         display: -webkit-inline-flex;
         font-family: monospace;
         overflow: hidden;

@@ -58,6 +58,7 @@ export class MaintenanceRegime {
 }
 export class DialysisRegime {
         public userId = "";
+        public regimeId = 0;
         public regimeName = "";
         public durationHours = 8;
         public modality = "Haemodialysis";

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Options } from '@angular-slider/ngx-slider';
 import { DialysisService } from '../../services/dialysis.service';
 import { first } from 'rxjs';
+import { FormGroup, FormControl } from '@angular/forms';
 import { DialysisRegime } from '../../models/dialysis-regime';
+import { DialysisSession } from '../../models/dialysis';
 @Component({
   selector: 'app-dialysis-form',
   templateUrl: './dialysis-form.component.html',
@@ -51,10 +53,20 @@ export class DialysisFormComponent implements OnInit {
     ceil: 37.5,
     step: 0.1
   };
-  private regime = new DialysisRegime()
+  private regime = new DialysisRegime();
+  public dialysisForm = new FormGroup({
+    sessionDate: new FormControl(new Date(Date.now())),
+    endTime: new FormControl("06:00"),
+    notes: new FormControl('')
+  });
+  private session = new DialysisSession();
   constructor(private dxService: DialysisService) { }
 
   ngOnInit(): void {
+    this.dialysisForm.patchValue( {
+      sessionDate: new Date(Date.now())
+    })
+    console.log(this.dialysisForm)
     this.dxService.getRegime("").pipe(first()).subscribe( result => {
       this.regime = result;
       this.temperature = this.regime.temperature;
@@ -63,5 +75,29 @@ export class DialysisFormComponent implements OnInit {
       this.fluidFlowRate = this.regime.qf.flow;
     })
   }
+  saveSession(): void {
+    this.session.arterial_pressure = this.arterialPressure;
+    this.session.venous_pressure = this.venousPressure;
+    this.session.duration_hours - this.duration;
+    this.session.uf_litres = this.ufVolume;
+    this.session.avg_tmp = this.transMembranePressure;
+    this.session.qb = this.bloodFlowRate;
+    this.session.qf = this.fluidFlowRate;
+    this.session.temp = this.temperature;
+    this.session.regimeId = this.regime.regimeId;
+    
+    this.session.notes = this.notes == null ? this.session.notes : this.notes.value ?? this.session.notes;
+    this.session.end_time = this.endTime == null ? this.session.end_time : this.endTime.value ?? this.session.end_time;
+    this.session.dateValue = this.sessionDate == null ? this.session.dateValue : this.sessionDate.value ?? this.session.dateValue;
+    this.session.date = this.sessionDate == null ? this.session.date : this.sessionDate.value?.toISOString() ?? this.session.date;
+    console.log(this.session);
+    // this.dxService.saveSession(this.session).subscribe(result => this.session = result);
+  }
+  get sessionDate() { return this.dialysisForm.get('sessionDate'); }
+
+  get endTime() { return this.dialysisForm.get('endTime'); }
+
+  get notes() { return this.dialysisForm.get('notes'); }
+
 
 }
