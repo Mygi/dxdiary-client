@@ -6,6 +6,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { DialysisRegime } from '../../models/dialysis-regime';
 import { DialysisSession } from '../../models/dialysis';
 import { DialysisSessionQuery } from '../../state/dialysis-state.query';
+import { formatDate } from '@angular/common';
 @Component({
   selector: 'app-dialysis-form',
   templateUrl: './dialysis-form.component.html',
@@ -56,16 +57,18 @@ export class DialysisFormComponent implements OnInit {
   };
   private regime = new DialysisRegime();
   public dialysisForm = new FormGroup({
-    sessionDate: new FormControl(new Date(Date.now())),
+    sessionDate: new FormControl(formatDate(new Date(), 'yyyy-MM-ddThh:mm', 'en-AU')),
     endTime: new FormControl("06:00"),
     notes: new FormControl('')
   });
   private session = new DialysisSession();
+  public currentDate = ""
   constructor(private dxService: DialysisService, private dxQuery: DialysisSessionQuery) { }
 
   ngOnInit(): void {
+    this.currentDate = new Date().toISOString().slice(0, 16);
     this.dialysisForm.patchValue( {
-      sessionDate: new Date(Date.now())
+      sessionDate: formatDate(new Date(), 'yyyy-MM-ddThh:mm', 'en-AU')
     })
     console.log(this.dialysisForm)
     this.dxService.getRegime("").pipe(first()).subscribe( result => {
@@ -96,8 +99,10 @@ export class DialysisFormComponent implements OnInit {
     
     this.session.notes = this.notes == null ? this.session.notes : this.notes.value ?? this.session.notes;
     this.session.end_time = this.endTime == null ? this.session.end_time : this.endTime.value ?? this.session.end_time;
-    this.session.dateValue = this.sessionDate == null ? this.session.dateValue : this.sessionDate.value ?? this.session.dateValue;
-    this.session.date = this.sessionDate == null ? this.session.date : this.sessionDate.value?.toISOString() ?? this.session.date;
+    this.session.date = this.sessionDate == null ? this.session.date : this.sessionDate.value ?? this.session.date;
+    
+    console.log(Date.parse(this.session.date));
+    // this.session.date = this.sessionDate == null ? this.session.date : this.sessionDate.value?.toISOString() ?? this.session.date;
     console.log(this.session);
     // this.dxService.saveSession(this.session).subscribe(result => this.session = result);
   }
