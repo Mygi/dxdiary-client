@@ -12,6 +12,8 @@ import { DialysisService } from './services/dialysis.service';
 import { MatSortModule } from '@angular/material/sort';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DialysisSessionQuery } from './state/dialysis-state.query';
+import { DialysisSessionStore } from './state/dialsysis-state.store';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    DialysisService
+    DialysisService,
+    DialysisSessionQuery,
+    DialysisSessionStore
   ]
 })
 export class DialysisModule { }

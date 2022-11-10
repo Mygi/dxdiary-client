@@ -4,6 +4,7 @@ import { DialysisSession } from '../models/dialysis';
 import { Observable, map } from 'rxjs';
 import { SortDirection} from '@angular/material/sort';
 import { DialysisRegime } from '../models/dialysis-regime';
+import { DialysisSessionStore } from '../state/dialsysis-state.store';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +12,7 @@ export class DialysisService {
 
   private dxUrl = "/assets/data/dialysis.json";
   private dxRegimeUrl = "/assets/data/dialysis-regime.json"
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private sessionStore: DialysisSessionStore) { }
 
   /**
    * Should add a better form of filtering!
@@ -42,5 +43,12 @@ export class DialysisService {
   //public addSession
   public saveSession(session: DialysisSession): Observable<DialysisSession> {
     return this._http.post<DialysisSession>(this.dxUrl, session);
+  }
+  public startSession(session: DialysisSession): boolean {
+    this.sessionStore.update({
+      currentSession: session,
+      currentSessionState: "started"
+    });
+    return true;
   }
 }

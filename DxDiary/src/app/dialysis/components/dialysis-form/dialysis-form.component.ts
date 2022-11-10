@@ -5,6 +5,7 @@ import { first } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DialysisRegime } from '../../models/dialysis-regime';
 import { DialysisSession } from '../../models/dialysis';
+import { DialysisSessionQuery } from '../../state/dialysis-state.query';
 @Component({
   selector: 'app-dialysis-form',
   templateUrl: './dialysis-form.component.html',
@@ -60,7 +61,7 @@ export class DialysisFormComponent implements OnInit {
     notes: new FormControl('')
   });
   private session = new DialysisSession();
-  constructor(private dxService: DialysisService) { }
+  constructor(private dxService: DialysisService, private dxQuery: DialysisSessionQuery) { }
 
   ngOnInit(): void {
     this.dialysisForm.patchValue( {
@@ -72,7 +73,14 @@ export class DialysisFormComponent implements OnInit {
       this.temperature = this.regime.temperature;
       this.bloodFlowRate = this.regime.qb.flow;
       this.duration = this.regime.durationHours;
-      this.fluidFlowRate = this.regime.qf.flow;
+      this.fluidFlowRate = this.regime.qf.flow;      
+      
+    });
+    this.dxQuery.sessionState$.subscribe(result => {
+      console.log(result);
+    });
+    this.dxQuery.currentSession$.subscribe(result => {
+      console.log(result);
     })
   }
   saveSession(): void {
