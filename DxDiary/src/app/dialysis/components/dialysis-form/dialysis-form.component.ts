@@ -62,11 +62,10 @@ export class DialysisFormComponent implements OnInit {
     notes: new FormControl('')
   });
   private session = new DialysisSession();
-  public currentDate = ""
+  public sessionStarted = false;
   constructor(private dxService: DialysisService, private dxQuery: DialysisSessionQuery) { }
 
   ngOnInit(): void {
-    this.currentDate = new Date().toISOString().slice(0, 16);
     this.dialysisForm.patchValue( {
       sessionDate: formatDate(new Date(), 'yyyy-MM-ddThh:mm', 'en-AU')
     })
@@ -80,7 +79,7 @@ export class DialysisFormComponent implements OnInit {
       
     });
     this.dxQuery.sessionState$.subscribe(result => {
-      console.log(result);
+      this.sessionStarted = result == 'started';
     });
     this.dxQuery.currentSession$.subscribe(result => {
       console.log(result);

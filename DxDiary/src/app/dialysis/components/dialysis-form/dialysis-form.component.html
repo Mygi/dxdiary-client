@@ -1,29 +1,25 @@
 <form [formGroup]="dialysisForm" (ngSubmit)="saveSession()">
-    <div class="status">
+    <div class="status is-size-4 has-text-success mt-2 mb-2 is-uppercase is-family-secondary ml-2" *ngIf="!sessionStarted">
         New Session
+    </div>
+    <div class="status" *ngIf="sessionStarted">
+        Complete Session
     </div>
 <div class="two-column-form">
     <div class="columns">
         <div class="column field-name">
-            Date
+            Start Date and Time
         </div>
-        <div class="column">
+        <div class="column" *ngIf="!sessionStarted">
             <input type="datetime-local"  formControlName="sessionDate" class="rounded" />
         </div>
     </div>   
-    <div class="columns">
-        <div class="column field-name">
-            Actual End Time
-        </div>
-        <div class="column">
-            <input type="time" formControlName="endTime" class="rounded" />
-        </div>
-    </div>
+ 
     <div class="columns">
         <div class="column field-name">
             Duration
         </div>
-        <div class="column">
+        <div class="column" *ngIf="!sessionStarted">
             <div class="custom-slider">
                 <ngx-slider [(value)]="duration" [options]="durationOptions"></ngx-slider>
             </div>
@@ -34,7 +30,7 @@
             UF Volume
         </div>
         <div class="column">
-            <div class="custom-slider">
+            <div class="custom-slider" *ngIf="!sessionStarted">
                 <ngx-slider [(value)]="ufVolume" [options]="ufOptions"></ngx-slider>
             </div>
         </div>
@@ -44,12 +40,30 @@
             Flow Rates
         </div>
         <div class="column">
-            <div class="custom-slider">
+            <div class="custom-slider" *ngIf="!sessionStarted">
                 <ngx-slider [(value)]="bloodFlowRate" [(highValue)]="fluidFlowRate" [options]="flowRateOptions"></ngx-slider>
             </div>
         </div>
-    </div>
+    </div>    
     <div class="columns">
+        <div class="column field-name">
+            Temperature (Celsius)
+        </div>
+        <div class="column">
+            <div class="custom-slider" *ngIf="!sessionStarted">
+                <ngx-slider [(value)]="temperature" [options]="temperatureOptions"></ngx-slider>
+            </div>
+        </div>
+    </div>
+    <div class="columns" *ngIf="sessionStarted">
+        <div class="column field-name">
+            Actual End Time
+        </div>
+        <div class="column" >
+            <input type="time" formControlName="endTime" class="rounded" />
+        </div>
+    </div>
+    <div class="columns" *ngIf="sessionStarted">
         <div class="column field-name">
             Venous / Arterial Pressures
         </div>
@@ -59,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="columns">
+    <div class="columns" *ngIf="sessionStarted">
         <div class="column field-name">
             Trans membrane Pressure
         </div>
@@ -69,17 +83,7 @@
             </div>
         </div>
     </div>
-    <div class="columns">
-        <div class="column field-name">
-            Temperature (Celsius)
-        </div>
-        <div class="column">
-            <div class="custom-slider">
-                <ngx-slider [(value)]="temperature" [options]="temperatureOptions"></ngx-slider>
-            </div>
-        </div>
-    </div>
-    <div class="columns">
+    <div class="columns" *ngIf="sessionStarted">
         <div class="column field-name">
             Notes
         </div>
@@ -88,8 +92,11 @@
         </div>
     </div>
     <div class="columns">
-        <div class="column button-column is-pulled-right is-full">
-            <button type="submit" class="button is-primary is-rounded">Save</button>
+        <div class="column button-column is-pulled-right is-full" *ngIf="!sessionStarted">
+            <button type="submit" class="button is-primary is-rounded">Start Session</button>
+        </div>
+        <div class="column button-column is-pulled-right is-full" *ngIf="sessionStarted">
+            <button class="button is-primary is-rounded">Conclude Session</button>
         </div>
     </div>
 </div>
