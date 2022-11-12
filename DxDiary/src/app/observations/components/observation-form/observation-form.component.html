@@ -1,3 +1,64 @@
-<p class="title">
-    Observations
-  </p>
+
+    <div class="columns">
+      <div class="column button-column is-pulled-right has-text-right is-full">
+        <button (click)="enterObservation()" class="button is-success is-rounded" *ngIf="!showObservationForm">Add an Observation</button>
+        
+    </div>
+    </div>
+  <div class="columns" *ngIf="showObservationForm">
+    <div class="column field-name">
+        Blood Pressure
+    </div>
+    <div class="column">
+        <div class="custom-slider" >
+            <ngx-slider [(value)]="diastolic" [(highValue)]="systolic" [options]="bpOptions"></ngx-slider>
+        </div>
+    </div>
+  </div>
+  <div class="columns" *ngIf="showObservationForm">
+    <div class="column field-name">
+        Pulse
+    </div>
+    <div class="column">
+        <div class="custom-slider">
+            <ngx-slider [(value)]="pulse" [options]="pulseOptions"></ngx-slider>
+        </div>
+    </div>
+  </div>  
+  <div class="columns" *ngIf="showObservationForm">
+    <div class="column field-name">
+        Weight
+    </div>
+    <div class="column">
+        <div class="custom-slider">
+            <ngx-slider [(value)]="weight" [options]="weightOptions"></ngx-slider>
+        </div>
+    </div>
+  </div>
+  <div class="columns" *ngIf="showObservationForm">
+    <div class="column field-name">
+        Oxygen Saturation
+    </div>
+    <div class="column">
+        <div class="custom-slider">
+            <ngx-slider [(value)]="o2saturation" [options]="o2Options"></ngx-slider>
+        </div>
+    </div>
+  </div>    
+  <div class="columns" *ngIf="showObservationForm">
+    <div class="column field-name">
+        Temperature
+    </div>
+    <div class="column">
+        <div class="custom-slider">
+            <ngx-slider [(value)]="temperature" [options]="temperatureOptions"></ngx-slider>
+        </div>
+    </div>
+  </div> 
+  <div class="columns">
+    <div class="column button-column is-pulled-right is-full has-text-right" *ngIf="showObservationForm">
+        <button (click)="saveObservation()" class="button is-success is-rounded">Save Observation</button>
+        <button (click)="cancelObservation()" class="button is-secondary is-rounded" *ngIf="showObservationForm">Cancel</button>
+    </div>
+
+</div>   

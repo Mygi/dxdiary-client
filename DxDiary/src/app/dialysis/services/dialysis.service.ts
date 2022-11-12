@@ -30,15 +30,22 @@ export class DialysisService {
                       {
                         x.forEach( item => item.dateValue = new Date(Date.parse(item.date)));                                    
                         return x.sort((a,b) => {
+                          if(sort == "preObservation") {
+                            return 0;
+                          }
+                          if(sort == "postObservation" ) {
+                              return 0;
+                          }
                           if(sort in a && sort in b) {
-                            return a[sort as keyof DialysisSession] > b[sort as keyof DialysisSession] ? orderAsNumber : 0
+                            
+                            return a[sort as keyof DialysisSession] ?? 0 > (b[sort as keyof DialysisSession] ?? 0) ? orderAsNumber : 0
                           }
                           return 0;
                         }).slice(page * pageSize, pageSize)
                       }));
   }
-  public getRegime(userId: string): Observable<DialysisRegime> {
-    return this._http.get<DialysisRegime>(this.dxRegimeUrl)
+  public getRegime(userId: string): Observable<DialysisRegime[]> {
+    return this._http.get<DialysisRegime[]>(this.dxRegimeUrl)
   }
   //public addSession
   public saveSession(session: DialysisSession): Observable<DialysisSession> {

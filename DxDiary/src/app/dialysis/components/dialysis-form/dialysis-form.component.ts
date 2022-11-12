@@ -7,6 +7,7 @@ import { DialysisRegime } from '../../models/dialysis-regime';
 import { DialysisSession } from '../../models/dialysis';
 import { DialysisSessionQuery } from '../../state/dialysis-state.query';
 import { formatDate } from '@angular/common';
+import { IObservation } from 'src/app/observations/models/observation';
 @Component({
   selector: 'app-dialysis-form',
   templateUrl: './dialysis-form.component.html',
@@ -55,7 +56,8 @@ export class DialysisFormComponent implements OnInit {
     ceil: 37.5,
     step: 0.1
   };
-  private regime = new DialysisRegime();
+  public regime = new DialysisRegime();
+  public regimes: DialysisRegime[] = [];
   public dialysisForm = new FormGroup({
     sessionDate: new FormControl(formatDate(new Date(), 'yyyy-MM-ddThh:mm', 'en-AU')),
     endTime: new FormControl("06:00"),
@@ -71,11 +73,12 @@ export class DialysisFormComponent implements OnInit {
     })
     console.log(this.dialysisForm)
     this.dxService.getRegime("").pipe(first()).subscribe( result => {
-      this.regime = result;
+      this.regime = result.find(x => x.isDefault) ?? new DialysisRegime();
       this.temperature = this.regime.temperature;
       this.bloodFlowRate = this.regime.qb.flow;
       this.duration = this.regime.durationHours;
       this.fluidFlowRate = this.regime.qf.flow;      
+      this.regimes = result;
       
     });
     this.dxQuery.sessionState$.subscribe(result => {
@@ -103,7 +106,7 @@ export class DialysisFormComponent implements OnInit {
     console.log(Date.parse(this.session.date));
     // this.session.date = this.sessionDate == null ? this.session.date : this.sessionDate.value?.toISOString() ?? this.session.date;
     console.log(this.session);
-    // this.dxService.saveSession(this.session).subscribe(result => this.session = result);
+    this.dxService.startSession(this.session);
   }
   get sessionDate() { return this.dialysisForm.get('sessionDate'); }
 
@@ -111,5 +114,24 @@ export class DialysisFormComponent implements OnInit {
 
   get notes() { return this.dialysisForm.get('notes'); }
 
-
+  setPreObservation(event: IObservation) {
+    console.log(event);
+    this.session.preObservation = event;
+  }
+  setPostObservation(event: IObservation) {
+    this.session.postObservation = event;
+  }
+  setRegime(regimeIdString: string) {
+    const regimeId = +regimeIdString;
+    const index = this.regimes.findIndex( x => x.regimeId == regimeId);
+    if(index == -1) {
+      return;
+    }
+    this.regime = this.regimes[index];
+    this.session.regimeId = this.regime.regimeId;
+    this.temperature = this.regime.temperature;
+    this.bloodFlowRate = this.regime.qb.flow;
+    this.duration = this.regime.durationHours;
+    this.fluidFlowRate = this.regime.qf.flow;   
+  }
 }

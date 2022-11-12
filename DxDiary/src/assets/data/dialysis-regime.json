@@ -1,87 +1,180 @@
-{
-    "userId": "",
-    "modality": "Haemodialysis",
-    "regimeName":"Nocturnal Extended Hours",
-    "durationHours": 8,
-    "qb": {
-        "fluidUnitOfMeasure": "ml",
-        "timeUnitOfMeasure": "minute",
-        "flow": 250,
-        "time": 1
-    },
-    "qf": {
-        "fluidUnitOfMeasure": "ml",
-        "timeUnitOfMeasure": "minute",
-        "flow": 300,
-        "time": 1
-    },
-    "temperature": 36.0,
-    "dialysate": {
-        "kPlusConcentration": {
-            "soluteUnitOfMeasure": "mmol",
-            "solventUnitOfMeasure": "ml",
-            "soluteAmount": 2.0,
-            "solventAmount": 1000
+[
+    {
+        "userId": "",
+        "regimeId": 1,
+        "modality": "Haemodialysis",
+        "isDefault": true,
+        "regimeName": "Nocturnal Extended Hours",
+        "durationHours": 8,
+        "qb": {
+            "fluidUnitOfMeasure": "ml",
+            "timeUnitOfMeasure": "minute",
+            "flow": 250,
+            "time": 1
         },
-        "NaTotalConcentration": {
-            "soluteUnitOfMeasure": "mmol",
-            "solventUnitOfMeasure": "ml",
-            "soluteAmount": 140.0,
-            "solventAmount": 1000
+        "qf": {
+            "fluidUnitOfMeasure": "ml",
+            "timeUnitOfMeasure": "minute",
+            "flow": 300,
+            "time": 1
         },
-        "calciumConcentration": {
-            "soluteUnitOfMeasure": "mmol",
-            "solventUnitOfMeasure": "ml",
-            "soluteAmount": 2.2,
-            "solventAmount": 1000
-        },
-        "bicarbonateConcentration": {
-            "soluteUnitOfMeasure": "mmol",
-            "solventUnitOfMeasure": "ml",
-            "soluteAmount": 35.0,
-            "solventAmount": 1000
-        }
-    },
-    "dialyser": {
-        "brand": "Baxter",
-        "model": "170H",
-        "surfaceArea": 1.7
-    },
-    "anticoagulant": {
-        "initialAnticoagulant":{
-            "unitOfMeasure": "units",
-            "units": 3000,
-            "frequency": {
-                "label": "3000 units initial",
-                "frequency": "singleUse"
+        "temperature": 36.0,
+        "dialysate": {
+            "kPlusConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 2.0,
+                "solventAmount": 1000
             },
-            "medication": {
-                "drugName": "Heparin Sodium",
-                "drugChemicalName": "Porcine Mucous",
-                "administration": "intavenous",
-                "linkedInformationUrl": ""
+            "NaTotalConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 140.0,
+                "solventAmount": 1000
+            },
+            "calciumConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 2.2,
+                "solventAmount": 1000
+            },
+            "bicarbonateConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 35.0,
+                "solventAmount": 1000
             }
         },
-        "anticoagulantStopTimeMinutes": 30,
-        "ongoingAnticoagulant": {
-            "unitOfMeasure": "units",
-            "units": 1200,
-            "frequency": {
-                "label": "1200 units hourly",
-                "frequency": "hourly"
+        "dialyser": {
+            "brand": "Baxter",
+            "model": "170H",
+            "surfaceArea": 1.7
+        },
+        "anticoagulant": {
+            "initialAnticoagulant": {
+                "unitOfMeasure": "units",
+                "units": 3000,
+                "frequency": {
+                    "label": "3000 units initial",
+                    "frequency": "singleUse"
+                },
+                "medication": {
+                    "drugName": "Heparin Sodium",
+                    "drugChemicalName": "Porcine Mucous",
+                    "administration": "intavenous",
+                    "linkedInformationUrl": ""
+                }
             },
-            "medication": {
-                "drugName": "Heparin Sodium",
-                "drugChemicalName": "Porcine Mucous",
-                "administration": "intavenous",
-                "linkedInformationUrl": ""
+            "anticoagulantStopTimeMinutes": 30,
+            "ongoingAnticoagulant": {
+                "unitOfMeasure": "units",
+                "units": 1200,
+                "frequency": {
+                    "label": "1200 units hourly",
+                    "frequency": "hourly"
+                },
+                "medication": {
+                    "drugName": "Heparin Sodium",
+                    "drugChemicalName": "Porcine Mucous",
+                    "administration": "intavenous",
+                    "linkedInformationUrl": ""
+                }
             }
+        },
+        "sessionsPerWeek": {
+            "fluidUnitOfMeasure": "session",
+            "timeUnitOfMeasure": "week",
+            "flow": 3.5,
+            "time": 1
         }
     },
-    "sessionsPerWeek": {
-        "fluidUnitOfMeasure": "session",
-        "timeUnitOfMeasure": "week",
-        "flow": 3.5,
-        "time": 1
+    {
+        "userId": "",
+        "modality": "HaemoDialysis",
+        "regimeId": 2,
+        "isDefault": false,
+        "regimeName": "Extended Hours",
+        "durationHours": 6,
+        "qb": {
+            "fluidUnitOfMeasure": "ml",
+            "timeUnitOfMeasure": "minute",
+            "flow": 300,
+            "time": 1
+        },
+        "qf": {
+            "fluidUnitOfMeasure": "ml",
+            "timeUnitOfMeasure": "minute",
+            "flow": 420,
+            "time": 1
+        },
+        "temperature": 36.0,
+        "dialysate": {
+            "kPlusConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 2.0,
+                "solventAmount": 1000
+            },
+            "NaTotalConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 140.0,
+                "solventAmount": 1000
+            },
+            "calciumConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 2.2,
+                "solventAmount": 1000
+            },
+            "bicarbonateConcentration": {
+                "soluteUnitOfMeasure": "mmol",
+                "solventUnitOfMeasure": "ml",
+                "soluteAmount": 35.0,
+                "solventAmount": 1000
+            }
+        },
+        "dialyser": {
+            "brand": "Baxter",
+            "model": "170H",
+            "surfaceArea": 1.7
+        },
+        "anticoagulant": {
+            "initialAnticoagulant": {
+                "unitOfMeasure": "units",
+                "units": 3000,
+                "frequency": {
+                    "label": "3000 units initial",
+                    "frequency": "singleUse"
+                },
+                "medication": {
+                    "drugName": "Heparin Sodium",
+                    "drugChemicalName": "Porcine Mucous",
+                    "administration": "intavenous",
+                    "linkedInformationUrl": ""
+                }
+            },
+            "anticoagulantStopTimeMinutes": 30,
+            "ongoingAnticoagulant": {
+                "unitOfMeasure": "units",
+                "units": 1000,
+                "frequency": {
+                    "label": "1200 units hourly",
+                    "frequency": "hourly"
+                },
+                "medication": {
+                    "drugName": "Heparin Sodium",
+                    "drugChemicalName": "Porcine Mucous",
+                    "administration": "intavenous",
+                    "linkedInformationUrl": ""
+                }
+            }
+        },
+        "sessionsPerWeek": {
+            "fluidUnitOfMeasure": "session",
+            "timeUnitOfMeasure": "week",
+            "flow": 4,
+            "time": 1
+        }
     }
-}
+]

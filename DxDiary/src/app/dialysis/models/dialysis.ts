@@ -1,9 +1,12 @@
+import { IObservation } from "src/app/observations/models/observation";
 
 
 export class DialysisSession {
     public userId = '';
     public regimeId = 0;
     public date = Date.now().toLocaleString();
+    public preObservation?: IObservation;
+    public postObservation?: IObservation;
     public start_time = "21:00";
     public end_time = "05:00";
     public duration_hours = 8;

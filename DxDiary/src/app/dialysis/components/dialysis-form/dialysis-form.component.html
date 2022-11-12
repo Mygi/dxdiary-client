@@ -1,11 +1,24 @@
-<form [formGroup]="dialysisForm" (ngSubmit)="saveSession()">
-    <div class="status is-size-4 has-text-success mt-2 mb-2 is-uppercase is-family-secondary ml-2" *ngIf="!sessionStarted">
-        New Session
-    </div>
-    <div class="status" *ngIf="sessionStarted">
-        Complete Session
-    </div>
+<form [formGroup]="dialysisForm">
+    
 <div class="two-column-form">
+ 
+      <div class="columns">
+        <div class="column field-name">
+            <div class="status is-size-5 has-text-success is-uppercase is-family-secondary" *ngIf="!sessionStarted">
+                New Session
+            </div>
+            <div class="status" *ngIf="sessionStarted">
+                Complete Session
+            </div>
+        </div>
+        <div class="column has-text-right" *ngIf="!sessionStarted">
+            <div class="select is-rounded is-primary">
+                <select  #selectRegime (change)="setRegime(selectRegime.value)">
+                  <option *ngFor="let regimeOption of regimes" [value]="regimeOption.regimeId" [selected]="regimeOption.regimeId==regime.regimeId">{{regimeOption.regimeName}}</option>
+                </select>
+              </div>
+        </div>
+    </div>   
     <div class="columns">
         <div class="column field-name">
             Start Date and Time
@@ -37,7 +50,7 @@
     </div>
     <div class="columns">
         <div class="column field-name">
-            Flow Rates
+            Flow Rates (Blood and Dialysate)
         </div>
         <div class="column">
             <div class="custom-slider" *ngIf="!sessionStarted">
@@ -47,7 +60,7 @@
     </div>    
     <div class="columns">
         <div class="column field-name">
-            Temperature (Celsius)
+            Dialysate Temperature (Celsius)
         </div>
         <div class="column">
             <div class="custom-slider" *ngIf="!sessionStarted">
@@ -55,6 +68,7 @@
             </div>
         </div>
     </div>
+    <app-observation-form (savedObservation)="setPreObservation($event)"></app-observation-form>
     <div class="columns" *ngIf="sessionStarted">
         <div class="column field-name">
             Actual End Time
@@ -83,6 +97,7 @@
             </div>
         </div>
     </div>
+    <app-observation-form *ngIf="sessionStarted" (savedObservation)="setPostObservation($event)"></app-observation-form>
     <div class="columns" *ngIf="sessionStarted">
         <div class="column field-name">
             Notes
@@ -93,7 +108,7 @@
     </div>
     <div class="columns">
         <div class="column button-column is-pulled-right is-full" *ngIf="!sessionStarted">
-            <button type="submit" class="button is-primary is-rounded">Start Session</button>
+            <button (click)="saveSession()" class="button is-primary is-rounded">Start Session</button>
         </div>
         <div class="column button-column is-pulled-right is-full" *ngIf="sessionStarted">
             <button class="button is-primary is-rounded">Conclude Session</button>

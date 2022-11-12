@@ -14,6 +14,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialysisSessionQuery } from './state/dialysis-state.query';
 import { DialysisSessionStore } from './state/dialsysis-state.store';
+import { ObservationsModule } from '../observations/observations.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DialysisSessionStore } from './state/dialsysis-state.store';
     MatSortModule,
     HttpClientModule,
     NgxSliderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ObservationsModule
   ],
   providers: [
     DialysisService,
