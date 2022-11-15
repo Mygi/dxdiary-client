@@ -63,15 +63,15 @@ export class DialysisFormComponent implements OnInit {
     endTime: new FormControl("06:00"),
     notes: new FormControl('')
   });
-  private session = new DialysisSession();
+  public session = new DialysisSession();
   public sessionStarted = false;
+  public hasSavedPreObservation = false;  
   constructor(private dxService: DialysisService, private dxQuery: DialysisSessionQuery) { }
 
   ngOnInit(): void {
     this.dialysisForm.patchValue( {
       sessionDate: formatDate(new Date(), 'yyyy-MM-ddThh:mm', 'en-AU')
     })
-    console.log(this.dialysisForm)
     this.dxService.getRegime("").pipe(first()).subscribe( result => {
       this.regime = result.find(x => x.isDefault) ?? new DialysisRegime();
       this.temperature = this.regime.temperature;
@@ -79,14 +79,33 @@ export class DialysisFormComponent implements OnInit {
       this.duration = this.regime.durationHours;
       this.fluidFlowRate = this.regime.qf.flow;      
       this.regimes = result;
-      
+      this.dxQuery.sessionState$.subscribe(result => {
+        this.sessionStarted = result == 'started';
+        if(this.sessionStarted) {
+          this.dxQuery.currentSession$.subscribe(result => {       
+            if(result !== undefined) {
+              // should copy?!
+              this.session.date = result.date;
+              this.session.duration_hours = result.duration_hours;
+              this.temperature = this.session.temp;
+              this.bloodFlowRate = this.session.qb;
+              this.duration = this.session.duration_hours;
+              this.fluidFlowRate = this.session.qb; 
+              if(result.preObservation != undefined){
+                this.hasSavedPreObservation = true;
+                this.session.preObservation = {...result.preObservation};
+              } else {
+                this.hasSavedPreObservation = false;
+              }
+              console.log(this.hasSavedPreObservation);
+            }        
+          });
+        }
+      });
+    
     });
-    this.dxQuery.sessionState$.subscribe(result => {
-      this.sessionStarted = result == 'started';
-    });
-    this.dxQuery.currentSession$.subscribe(result => {
-      console.log(result);
-    })
+    
+   
   }
   saveSession(): void {
     this.session.arterial_pressure = this.arterialPressure;
@@ -103,9 +122,7 @@ export class DialysisFormComponent implements OnInit {
     this.session.end_time = this.endTime == null ? this.session.end_time : this.endTime.value ?? this.session.end_time;
     this.session.date = this.sessionDate == null ? this.session.date : this.sessionDate.value ?? this.session.date;
     
-    console.log(Date.parse(this.session.date));
     // this.session.date = this.sessionDate == null ? this.session.date : this.sessionDate.value?.toISOString() ?? this.session.date;
-    console.log(this.session);
     this.dxService.startSession(this.session);
   }
   get sessionDate() { return this.dialysisForm.get('sessionDate'); }
@@ -119,6 +136,7 @@ export class DialysisFormComponent implements OnInit {
     this.session.preObservation = event;
   }
   setPostObservation(event: IObservation) {
+    // should patch state
     this.session.postObservation = event;
   }
   setRegime(regimeIdString: string) {
@@ -133,5 +151,9 @@ export class DialysisFormComponent implements OnInit {
     this.bloodFlowRate = this.regime.qb.flow;
     this.duration = this.regime.durationHours;
     this.fluidFlowRate = this.regime.qf.flow;   
+  }
+  restartSession() {
+    this.sessionStarted = false;
+    this.hasSavedPreObservation = false;
   }
 }

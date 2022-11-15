@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
 import { DialysisSession } from '../models/dialysis';
-
+import { produce } from 'immer';
 export interface DialysisSessionState {
    key: number;
    currentSession?: DialysisSession;
@@ -16,7 +16,7 @@ export function createInitialState(): DialysisSessionState {
 }
 
 @Injectable({ providedIn: 'root' })
-@StoreConfig({ name: 'dialysisSession' })
+@StoreConfig({ name: 'dialysisSession', producerFn: produce })
 export class DialysisSessionStore extends Store<DialysisSessionState> {
 
   constructor() {

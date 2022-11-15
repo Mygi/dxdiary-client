@@ -26,6 +26,7 @@
     "bulma": "^0.9.4",
     "bulma-dashboard": "^0.3.2",
     "bulma-pageloader": "^0.3.0",
+    "immer": "^9.0.16",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

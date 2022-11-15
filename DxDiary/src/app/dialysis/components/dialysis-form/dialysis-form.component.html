@@ -8,7 +8,7 @@
                 New Session
             </div>
             <div class="status" *ngIf="sessionStarted">
-                Complete Session
+                Session In Progress
             </div>
         </div>
         <div class="column has-text-right" *ngIf="!sessionStarted">
@@ -18,6 +18,13 @@
                 </select>
               </div>
         </div>
+        <div class="column button-column" *ngIf="sessionStarted">
+            <button class="button is-info is-rounded" (click)="restartSession()">
+                <span class="icon is-small">
+                    <i class="icofont-edit-alt"></i>
+                </span>
+            </button>
+        </div>        
     </div>   
     <div class="columns">
         <div class="column field-name">
@@ -25,6 +32,9 @@
         </div>
         <div class="column" *ngIf="!sessionStarted">
             <input type="datetime-local"  formControlName="sessionDate" class="rounded" />
+        </div>
+        <div class="column" *ngIf="sessionStarted">
+            {{session.date + 'Z' | date:'EEEE, MMMM d, y @ h:mm a'}}
         </div>
     </div>   
  
@@ -37,38 +47,87 @@
                 <ngx-slider [(value)]="duration" [options]="durationOptions"></ngx-slider>
             </div>
         </div>
+        <div class="column" *ngIf="sessionStarted">
+            {{session.duration_hours}} hours
+        </div>
     </div>
     <div class="columns">
         <div class="column field-name">
             UF Volume
         </div>
-        <div class="column">
-            <div class="custom-slider" *ngIf="!sessionStarted">
+        <div class="column" *ngIf="!sessionStarted">
+            <div class="custom-slider" >
                 <ngx-slider [(value)]="ufVolume" [options]="ufOptions"></ngx-slider>
             </div>
+        </div>
+        <div class="column" *ngIf="sessionStarted">
+            {{session.uf_litres}} Ltrs
         </div>
     </div>
     <div class="columns">
         <div class="column field-name">
             Flow Rates (Blood and Dialysate)
         </div>
-        <div class="column">
-            <div class="custom-slider" *ngIf="!sessionStarted">
+        <div class="column" *ngIf="!sessionStarted">
+            <div class="custom-slider" >
                 <ngx-slider [(value)]="bloodFlowRate" [(highValue)]="fluidFlowRate" [options]="flowRateOptions"></ngx-slider>
             </div>
+        </div>
+        <div class="column" *ngIf="sessionStarted">
+            Qb: {{session.qb}} mls/min, Qf: {{session.qf}} mls/min 
         </div>
     </div>    
     <div class="columns">
         <div class="column field-name">
             Dialysate Temperature (Celsius)
         </div>
-        <div class="column">
-            <div class="custom-slider" *ngIf="!sessionStarted">
+        <div class="column" *ngIf="!sessionStarted">
+            <div class="custom-slider" >
                 <ngx-slider [(value)]="temperature" [options]="temperatureOptions"></ngx-slider>
             </div>
         </div>
+        <div class="column" *ngIf="sessionStarted">
+           {{session.temp}} degrees celsius 
+        </div>
     </div>
-    <app-observation-form (savedObservation)="setPreObservation($event)"></app-observation-form>
+    <!-- Pre Observation -->
+    <div class="columns" *ngIf="hasSavedPreObservation && session.preObservation !== undefined">
+        <div class="column field-name">
+            Weight (before session)
+        </div>
+        <div class="column">
+            {{session.preObservation.weight}} kg          
+         </div>
+    </div>
+    <div class="columns" *ngIf="hasSavedPreObservation && session.preObservation != undefined">
+        <div class="column field-name">
+            Blood pressure (before session)
+        </div>
+        <div class="column">
+            {{session.preObservation.systolic}} / {{session.preObservation.diastolic}}  
+        </div>      
+    </div>
+    <div class="columns" *ngIf="hasSavedPreObservation && session.preObservation != undefined">
+        <div class="column field-name">
+            Pulse (before session)
+        </div>        
+        <div class="column">
+            {{session.preObservation.pulse}}  
+         </div>
+    </div>
+    <div class="columns" *ngIf="hasSavedPreObservation && session.preObservation != undefined">
+        <div class="column field-name">
+            Oxygen saturation: (before session)
+        </div>   
+        <div class="column">
+            {{session.preObservation.oxygenSaturation}}%  
+         </div>
+    </div>
+    <div *ngIf="hasSavedPreObservation == false">
+        {{hasSavedPreObservation}}  
+        <app-observation-form  (savedObservation)="setPreObservation($event)"></app-observation-form>
+    </div>
+    <!-- end pre observation -->
     <div class="columns" *ngIf="sessionStarted">
         <div class="column field-name">
             Actual End Time

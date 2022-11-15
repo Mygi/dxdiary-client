@@ -4,7 +4,7 @@ import { DialysisSession } from '../models/dialysis';
 import { Observable, map } from 'rxjs';
 import { SortDirection} from '@angular/material/sort';
 import { DialysisRegime } from '../models/dialysis-regime';
-import { DialysisSessionStore } from '../state/dialsysis-state.store';
+import { DialysisSessionState, DialysisSessionStore } from '../state/dialsysis-state.store';
 @Injectable({
   providedIn: 'root'
 })
@@ -56,6 +56,10 @@ export class DialysisService {
       currentSession: session,
       currentSessionState: "started"
     });
+    return true;
+  }
+  public updateSession(session: Partial<DialysisSessionState>): boolean {
+    this.sessionStore.update(session);
     return true;
   }
 }
